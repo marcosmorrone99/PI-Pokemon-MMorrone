@@ -1,0 +1,90 @@
+.button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: whitesmoke;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px #fffcee;
+    
+ 
+    overflow: hidden;
+    border: 2px solid #e8e8e8;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    padding: 44px 32px 48px;
+    width: 400px;
+    height: 100px;
+    font-size: 30px;
+    color: #274C77;
+    
+}
+
+.button:after {
+    content: "¡Vamos!";
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 0%;
+    height: 100%;
+    background: #FFD401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+}
+
+.button:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.button span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 24px 30px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+   
+
+.background {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../images/pxfuel.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: fixed;
+}
+
+/* .title {
+    margin-top: 200px; 
+  } */
