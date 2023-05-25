@@ -1,21 +1,17 @@
 .container{
-    border: 1px solid #acacac;
     display: flex;
-    flex-direction: row;
-    border-radius: 15px;
     flex-wrap: wrap;
-    gap: 1em;
-    /* justify-content: space-e; */
-    align-items: flex-end;
-    width: 100vw;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    max-width: 1800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
     margin-top: 15px;
-}
+  }
 
 .paginadoContainer {
     display: flex;
     justify-content: center;
-    margin-top: 1rem; /* Ajusta el margen superior según tus necesidades */
     align-content: center;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }

@@ -4,6 +4,7 @@
     justify-content: space-around;
     border: 1px solid rgb(175, 175, 175);
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .nav-container{
@@ -19,13 +20,16 @@
 }
 
 .buttonNav {
-    font-size: 13px;
-    padding: 0.3em 1em;
+    font-size: 15px;
+    padding: 5px 15px;
     border: transparent;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    background: rgb(201, 204, 0);
+    background: #f0e130;
     color: black;
     border-radius: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    cursor: pointer;
    }
    
    .buttonNav:hover {

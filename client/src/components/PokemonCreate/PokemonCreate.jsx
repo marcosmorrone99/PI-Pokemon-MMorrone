@@ -125,52 +125,52 @@ const handleSubmit = (event) => {
 
 return (
     <div>
-        <h1>¡Crea tu Pokemon!</h1>
+        <h1>¡Create Your Pokemon!</h1>
         <form className={style.form} onSubmit={(event) => handleSubmit(event)}>
         <div>
-        <label className={style.label} >Nombre </label>
+        <label className={style.label} >Name </label>
         <input className={style.input} type="text" value={input.name} name= "name" onChange={handleChange}/>
         {error.name && (<p style={{color: 'rgb(222, 15, 15)'}}>{error.name}</p>)}
         <hr style={{borderStyle: 'none'}}/>
         </div>
         <div>
-        <label className={style.label}>Vida </label>
+        <label className={style.label}>HP </label>
         <input className={style.input} type="number" value={input.hp} name= "hp" onChange={handleChange}/>
         {error.hp && (<p style={{color: 'rgb(222, 15, 15)'}}>{error.hp}</p>)}
         <hr style={{borderStyle: 'none'}}/>
         </div>
         <div>
-        <label className={style.label}>Ataque </label>
+        <label className={style.label}>Attack </label>
         <input className={style.input} type="number" value={input.attack} name= "attack" onChange={handleChange}/>
         {error.attack && (<p style={{color: 'rgb(222, 15, 15)'}}>{error.attack}</p>)}
         <hr style={{borderStyle: 'none'}}/>
         </div>
         <div>
-        <label className={style.label}>Defensa </label>
+        <label className={style.label}>Defense </label>
         <input className={style.input} type="number" value={input.defense} name= "defense" onChange={handleChange}/>
         {error.defense && (<p style={{color: 'rgb(222, 15, 15)'}}>{error.defense}</p>)}
         <hr style={{borderStyle: 'none'}}/>
         </div>
         <div>
-        <label className={style.label}>Velocidad </label>
+        <label className={style.label}>Speed </label>
         <input className={style.input} type="number" value={input.speed} name= "speed" onChange={handleChange}/>
         {error.speed && (<p style={{color: 'rgb(222, 15, 15)'}}>{error.speed}</p>)}
         <hr style={{borderStyle: 'none'}}/>
         </div>
         <div>
-        <label className={style.label}>Altura </label>
+        <label className={style.label}>Height </label>
         <input className={style.input} type="number" value={input.height} name= "height" onChange={handleChange}/>
         {error.height && (<p style={{color: 'rgb(222, 15, 15)'}}>{error.height}</p>)}
         <hr style={{borderStyle: 'none'}}/>
         </div>
         <div>
-        <label className={style.label}>Peso </label>
+        <label className={style.label}>Weight </label>
         <input className={style.input} type="number" value={input.weight} name= "weight" onChange={handleChange}/>
         {error.weight && (<p style={{color: 'rgb(222, 15, 15)'}}>{error.weight}</p>)}
         <hr style={{borderStyle: 'none'}}/>
         </div>
         <div>
-        <label className={style.label}>Imagen (URL) </label>
+        <label className={style.label}>Image (URL) </label>
         <input className={style.input} type="url" value={input.image} name= "image" onChange={handleChange}/>
         </div>
         <div> 
@@ -188,7 +188,7 @@ return (
           </div>
         </div>
         </div>
-        <button className={style.submit} type="submit">Crear Pokemon</button>
+        <button className={style.submit} type="submit">Create Pokemon</button>
         </form>
     </div>
 )

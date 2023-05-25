@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 import style from "./Home.module.css"
 // import Paginado from "../../components/Paginado/Paginado";
 
-const Home = () => {
+const Home = (props) => {
 
 const dispatch = useDispatch()
 
@@ -25,8 +25,7 @@ const [orden, setOrden] = useState('')
     dispatch(getTypes())
    },[dispatch])
 
-   
-   
+
    
 const handleClick = (event) => {
      event.preventDefault()
@@ -55,18 +54,18 @@ const handlerAtoZ = (event) => {
         <div className={style.home}>
             <div>
                 <select className={style.select} onChange={event => handleFilterTypes(event)}>
-                <option value="--">Tipos</option>
+                <option value="--">Types</option>
                 {types && types.map(t => (<option value={t.name}>{t.name}</option>))}
                 </select>
                 <select className={style.select} onChange={event => handlerFilterCreated(event)}>
                     <option value="--">---</option>
-                    <option value="api">De la API</option>
-                    <option value="db">Creado por vos</option>
+                    <option value="api">From API</option>
+                    <option value="db">Created By You</option>
                 </select>
                 <select className={style.select} onChange={event => handlerAttack(event)}>
                     <option value="--">---</option>
-                    <option value="desc">Mayor a Menor Ataque</option>
-                    <option value="asc">Menor a Mayor Ataque</option>
+                    <option value="desc">Higher To Lower Attack</option>
+                    <option value="asc">Lower To Higher Attack</option>
                 </select>
                 <select className={style.select} onChange={event => handlerAtoZ(event)}>
                     <option value="--">---</option>
@@ -74,7 +73,7 @@ const handlerAtoZ = (event) => {
                     <option value="ztoa">Z-A</option>
                 </select>
            <button className={style.button} onClick={event => handleClick(event)}>
-            Resetear Filtros
+            Reset Filters
             </button>
            <CardsContainer/>
             </div>

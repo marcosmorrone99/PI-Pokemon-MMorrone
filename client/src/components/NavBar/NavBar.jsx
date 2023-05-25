@@ -10,7 +10,7 @@ const NavBar = () => {
          </Link>
          <SearchBar/>
          <Link to= '/form'>
-         <button className={style.buttonNav}>Crear Pokemon</button>
+         <button className={style.buttonNav}>Create Pokemon</button>
          </Link>
         </div>
     )

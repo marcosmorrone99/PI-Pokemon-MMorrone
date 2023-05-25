@@ -21,8 +21,8 @@ const handleSubmit = (event) => {
 
    return (
   <div>
-    <input className={style.input} type='text' placeholder="Nombre Del Pokemon..." onChange={(event) => handleInputChange(event)} value={name}/>
-    <button className={style.button} type='submit' onClick={(event) => handleSubmit(event)}>Buscar</button>
+    <input className={style.input} type='text' placeholder="Name Of Pokemon..." onChange={(event) => handleInputChange(event)} value={name}/>
+    <button className={style.button} type='submit' onClick={(event) => handleSubmit(event)}>Search</button>
   </div>
    )
 

@@ -1,18 +1,19 @@
 .button {
-    font-size: 13px;
-    padding: 0.3em 1em;
+    font-size: 15px;
+    padding: 5px 15px;
     border: transparent;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    background: rgb(201, 204, 0);
+    background: #f0e130;
     color: black;
     border-radius: 2px;
     margin-left: 15px;
     margin-right: 15px;
+    cursor: pointer;
    }
    
    .button:hover {
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgb(211, 207, 0) 0%, rgb(178, 190, 0) 100%);
+    background: linear-gradient(90deg, #f0e130, rgb(178, 190, 0) 100%);
    }
    
    .button:active {
@@ -27,18 +28,19 @@
     margin: 0;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 40px;
     
 }
 
 .select {
     margin-left: 10px;
-    font-size: 13px;
-    padding: 0.3em 1em;
+    font-size: 15px;
+    padding: 5px 15px;
     border: transparent;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    background: rgb(201, 204, 0);
+    background: #f0e130;
     color: black;
     border-radius: 2px;
+    cursor: pointer;
 
 }

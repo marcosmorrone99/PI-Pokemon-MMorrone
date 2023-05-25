@@ -16,3 +16,4 @@ typeRouter.get('/', async (req, res) => {
 
 
 module.exports = typeRouter;
+

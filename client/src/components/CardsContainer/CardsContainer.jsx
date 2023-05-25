@@ -5,12 +5,12 @@ import Paginado from "../Paginado/Paginado"
 import { useState } from "react"
 
 
-const CardsContainer = () => {
+const CardsContainer = (props) => {
 
     const pokemons = useSelector(state=>state.pokemons) //"traeme en esta constante todo lo que esta en el estado de pokemones"
     
     const [currentPage, setCurrentPage] = useState(1)
-    const [pokemonsPerPage, setPokemonsPerPage] = useState(12)
+    const [pokemonsPerPage, setPokemonsPerPage] = useState(12) //lo podria haber hecho una constante ya que no uso el modificador de estado local
     const lastPokemonIndex = currentPage * pokemonsPerPage
     const firstPokemonIndex = lastPokemonIndex - pokemonsPerPage
     const currentPokemons = pokemons.slice(firstPokemonIndex,lastPokemonIndex)
@@ -18,6 +18,22 @@ const CardsContainer = () => {
     // const paginado = (pageNumber) => {
     //     setCurrentPage(pageNumber)
     // }
+
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+      };
+    
+      const prevPage = () => {
+        if (currentPage !== 1) {
+           setCurrentPage(currentPage - 1);
+        }
+     };
+    
+     const nextPage = () => {
+        if (currentPage !== Math.ceil(pokemons.length / pokemonsPerPage)) {
+           setCurrentPage(currentPage + 1);
+        }
+     };
 
     return(
         <div className={style.container}>
@@ -36,7 +52,11 @@ const CardsContainer = () => {
             <Paginado 
             pokemonsPerPage={pokemonsPerPage} 
             allPokemons={pokemons.length} 
-            setCurrentPage={setCurrentPage} />
+            setCurrentPage={setCurrentPage} 
+            paginate={paginate}
+            prevPage={prevPage}
+            nextPage={nextPage}
+            />
             </div>
         </div>
 

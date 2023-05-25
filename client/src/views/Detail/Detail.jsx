@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPokemonById } from "../../redux/actions";
 import './Detail.module.css'
 import { useParams } from "react-router-dom";
+import style from "./Detail.module.css"
 
 
 
@@ -20,12 +21,12 @@ const Detail = () => {
 
 
     return (
-        <div className="detail-page-container">
-            <h3 className="title-detail">Details</h3>
-        <div className="detail-container">
-            <img className='img-detail' src={pokemon.image} alt={pokemon.image} width="140" height="150px"></img>
-            <div className="details">
-            <p className="name-detail">{pokemon.name}</p>
+        <div className={style.detailPageContainer}>
+            <h3 className={style.titleDetail}>Details</h3>
+        <div className={style.detailContainer}>
+            <img src={pokemon.image} alt={pokemon.image} width="140" height="150px"></img>
+            <div className={style.details}>
+            <p className={style.nameDetail}>{pokemon.name}</p>
             <p>id: {pokemon.id}</p>
             <p>hp: {pokemon.hp}</p>
             <p>Attack: {pokemon.attack}</p>

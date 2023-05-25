@@ -1,16 +1,124 @@
 .card{
+    text-align: center;
+    clip-path: polygon(
+    0px 30px,
+    6px 30px,
+    6px 18px,
+    12px 18px,
+    12px 12px,
+    18px 12px,
+    18px 6px,
+    24px 6px,
+    30px 6px,
+    30px 0px,
+    calc(100% - 30px) 0px,
+    calc(100% - 30px) 6px,
+    calc(100% - 18px) 6px,
+    calc(100% - 18px) 12px,
+    calc(100% - 12px) 12px,
+    calc(100% - 12px) 18px,
+    calc(100% - 6px) 18px,
+    calc(100% - 6px) 24px,
+    calc(100% - 6px) 30px,
+    100% 30px,
+    100% calc(100% - 30px),
+    calc(100% - 6px) calc(100% - 30px),
+    calc(100% - 6px) calc(100% - 18px),
+    calc(100% - 12px) calc(100% - 18px),
+    calc(100% - 12px) calc(100% - 12px),
+    calc(100% - 18px) calc(100% - 12px),
+    calc(100% - 18px) calc(100% - 6px),
+    calc(100% - 24px) calc(100% - 6px),
+    calc(100% - 30px) calc(100% - 6px),
+    calc(100% - 30px) 100%,
+    30px 100%,
+    30px calc(100% - 6px),
+    18px calc(100% - 6px),
+    18px calc(100% - 12px),
+    12px calc(100% - 12px),
+    12px calc(100% - 18px),
+    6px calc(100% - 18px),
+    6px calc(100% - 24px),
+    6px calc(100% - 30px),
+    0px calc(100% - 30px)
+  );
+  background: rgba(207, 194, 226, 0.396);
+  backdrop-filter: blur(1px);
+  padding: 3px;
+  margin: 2px;
+      width: 190px;
+      height: 150px;
+      transition: 0.5s;
+
     border: 1px solid black;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 10px;
-    justify-content: center;
-    text-decoration: none;
+    width: 200px;
+    height: 250px;
+    border: 10px outset #f0e130;
+    border-radius: 8px;
     color: black;
     background-color: #ebebeb;
-    box-shadow: 0px 2px 4px rgba(238, 255, 0, 0.2);
-    border-radius: 10px;
     font-family: "Arial", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
     color: black;
-    margin-top: 15px;
+    margin-top: 30px;
+    margin: 25px;
 }
+
+.cardOut{
+    clip-path: polygon(
+        0px 30px,
+        6px 30px,
+        6px 18px,
+        12px 18px,
+        12px 12px,
+        18px 12px,
+        18px 6px,
+        24px 6px,
+        30px 6px,
+        30px 0px,
+        calc(100% - 30px) 0px,
+        calc(100% - 30px) 6px,
+        calc(100% - 18px) 6px,
+        calc(100% - 18px) 12px,
+        calc(100% - 12px) 12px,
+        calc(100% - 12px) 18px,
+        calc(100% - 6px) 18px,
+        calc(100% - 6px) 24px,
+        calc(100% - 6px) 30px,
+        100% 30px,
+        100% calc(100% - 30px),
+        calc(100% - 6px) calc(100% - 30px),
+        calc(100% - 6px) calc(100% - 18px),
+        calc(100% - 12px) calc(100% - 18px),
+        calc(100% - 12px) calc(100% - 12px),
+        calc(100% - 18px) calc(100% - 12px),
+        calc(100% - 18px) calc(100% - 6px),
+        calc(100% - 24px) calc(100% - 6px),
+        calc(100% - 30px) calc(100% - 6px),
+        calc(100% - 30px) 100%,
+        30px 100%,
+        30px calc(100% - 6px),
+        18px calc(100% - 6px),
+        18px calc(100% - 12px),
+        12px calc(100% - 12px),
+        12px calc(100% - 18px),
+        6px calc(100% - 18px),
+        6px calc(100% - 24px),
+        6px calc(100% - 30px),
+        0px calc(100% - 30px)
+      );
+      background: #c7c7c7;
+      backdrop-filter: blur(2px);
+      padding: 1px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+      
+}
+
+.card:hover{
+    width: 240px;
+      height: 240px;
+  }

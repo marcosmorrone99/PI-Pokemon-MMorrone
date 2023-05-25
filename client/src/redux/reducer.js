@@ -44,7 +44,14 @@ const rootReducer = (state = initialState, action) => {
                 
     
     case FILTER_CREATED: 
-      
+    
+    if (action.payload === "--") {
+    return {
+      ...state,
+      pokemons: state.allPokemons,
+    };
+    }  
+    
     if(action.payload === "db") {
         console.log(state.allPokemons.filter(p => p.id.length > 5))
         return {
@@ -61,12 +68,13 @@ const rootReducer = (state = initialState, action) => {
               }
       
         return {
-                    ...state,
+                  ...state,
                     pokemons: state.pokemons
                 }
 
 
     case FILTER_AZ:
+
     if(action.payload === "atoz") {
           return  {
                     ...state,
@@ -90,20 +98,21 @@ const rootReducer = (state = initialState, action) => {
 
         
 
-              case FILTER_TYPE:
-                if (action.payload === "All") {
-                  return {
+      case FILTER_TYPE:
+        if (action.payload === "--") {
+            return {
                       ...state,
                       pokemons: state.allPokemons
                   }
-              } else {
-                  return {
+        } else {
+            return {
                       ...state,
                       pokemons: state.allPokemons.filter(p => (p.types && p.types.includes(action.payload)) || (p.types && p.types.map(t=> t.name).includes(action.payload)))
                   }
-              }
+          }
 
     case FILTER_ATTACK:
+
       if(action.payload === "asc") {
           return {
               ...state,

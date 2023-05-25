@@ -1,22 +1,32 @@
 import React from "react";
-import style from "./Paginado.module.css"
+import "./Paginado.css"
 
-const Paginado = ({pokemonsPerPage, allPokemons, setCurrentPage}) => {
-      const pageNumber = []
+const Paginado = ({pokemonsPerPage, allPokemons, currentPage, paginate, prevPage, nextPage}) => {
+      const pageNumbers = []
 
       for(let i = 1; i<=Math.ceil(allPokemons/pokemonsPerPage); i++){ 
-        pageNumber.push(i)
+        pageNumbers.push(i)
       }
 
       return (
-        
-            <div >
-                {pageNumber && pageNumber.map((number, index) => {
-                    return <button key={index} onClick={() => setCurrentPage(number)} className={style.paginado}>{number}</button>
-                  })}
+            <div className="pagination-container">
+                <ul className="pagination">
+                    <li onClick={prevPage} className="page-number">{'<'}</li>
+                    {pageNumbers.map((number) => (
+                        <li 
+                        key={number} 
+                        onClick={() => paginate(number)}
+                        className={'page-number'}>
+                            {number}
+                        </li>
+                    ))}
+                    <li onClick={nextPage} className="page-number">{'>'}</li>
+                </ul>
             </div>
-        
-      )
-}
+        )
+      };
+
+    //   className={`page-number ${currentPage === number ? 'active-page' : ''}`}>
 
 export default Paginado;
+
