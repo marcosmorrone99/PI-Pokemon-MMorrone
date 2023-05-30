@@ -32,7 +32,7 @@ const [input, setInput] = useState({
 
 const [error, setError] = useState({});
 
-const handleChange = (event) => { //a mi estado input ademas de lo que tiene agregale el target.value de lo que este modificando
+const handleChange = (event) => { //se llama cuando ocurre un evento de cambio en los campos de entrada del formulario. 
     setInput({
         ...input,
         [event.target.name] : event.target.value
@@ -82,15 +82,15 @@ const validation = (input) => {
     return error;
   }
 
-  const [checked, setChecked] = useState([]);
+  const [checked, setChecked] = useState([]); //Este estado se utiliza para almacenar los tipos seleccionados en los checkboxes.
 
 const handleCheck = (event) => {
   var updatedList = [...checked];
    if(event.target.checked){
     updatedList = [...checked, event.target.value];
   } else {
-    updatedList.splice(checked.indexOf(event.target.value), 1);
-  }
+    updatedList.splice(checked.indexOf(event.target.value), 1); //Si la casilla de verificación fue desmarcada se elimina el valor correspondiente de updatedList utilizando el método splice. 
+  } //Esto actualiza updatedList sin el valor del tipo de pokémon desmarcado.
   console.log(updatedList)
   setChecked(updatedList);
   setInput({
@@ -101,14 +101,14 @@ const handleCheck = (event) => {
     ...input,
     types : [...updatedList]
   }))
-}
+} //Se encarga de actualizar el estado checked en función de las selecciones del usuario. Si un checkbox se marca, se agrega el valor correspondiente al array checked. Si se desmarca, se elimina el valor del array.
 
-const isChecked = (item) =>
-  checked.includes(item) ? "checked-item" : "not-checked-item";
+// const isChecked = (item) =>
+//   checked.includes(item) ? "checked-item" : "not-checked-item";
 
 const handleSubmit = (event) => {
     event.preventDefault()
-    dispatch(createPokemon(input))
+    dispatch(createPokemon(input)) //para enviar los datos del formulario a la acción createPokemon
     setInput({
         name: "",
         image: "",
@@ -182,13 +182,16 @@ return (
             {types && types.map((item, index) => (
               <div key={index}>
                 <input value={item.name} type="checkbox" onChange={handleCheck} />
-                <span className={isChecked(item)}>{item.name}</span>
+                <span>{item.name}</span>
               </div>
             ))}
           </div>
         </div>
         </div>
-        <button className={style.submit} type="submit">Create Pokemon</button>
+        <button className={style.submit} type="submit"
+         disabled={!input.name || error.name || error.hp || error.attack || error.defense || error.speed || error.height || error.weight || input.types.length === 0}
+        >Create Pokemon</button>
+       
         </form>
     </div>
 )

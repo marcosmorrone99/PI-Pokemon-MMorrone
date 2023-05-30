@@ -9,9 +9,17 @@ pokemonRouter.get("/", async (req , res) => {
     const {name} = req.query
     
     try {
-        const results = name ? await searchPokemonByName(name) : await getAllPokemons()
-    
-        return res.status(200).json(results)
+        if(name){
+            const results = await searchPokemonByName(name)
+            if(results.length === 0){
+                res.status(400).json({message: 'El nombre no existe'})
+            }else{
+                return res.status(200).json(results)
+            }
+        } else {
+            const allPokes = await getAllPokemons()
+            return res.status(200).json(allPokes)
+        }
         
     } catch (error) {
         console.log(error)

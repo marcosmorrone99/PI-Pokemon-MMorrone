@@ -36,7 +36,13 @@ ul {
 	background: #c49216;
 }
 
-/* .page-number.active-page {
+
+.active {
 	color: #fff;
-	background: #967a00;
-  } */
+	background: #c49216;
+}
+
+.active:hover {
+	color: #c5b99b;
+	background: #c49216;
+}

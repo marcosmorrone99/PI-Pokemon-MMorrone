@@ -44,11 +44,16 @@ export const getPokemonById = (id) => dispatch => {
 
 export const getPokemonByName = (name) => {
   return async function (dispatch) {
+    try {
       const pokesByName = await axios.get(`http://localhost:3001/pokemons?name=${name}`)
       return dispatch ({
         type: GET_POKEMONS_BY_NAME, 
         payload: pokesByName.data
       })
+    } catch (error) {
+      alert("No existe un pokemon con ese nombre")
+      console.log(error)
+    }
   }
 }
 

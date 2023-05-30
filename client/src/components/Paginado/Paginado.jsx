@@ -16,7 +16,7 @@ const Paginado = ({pokemonsPerPage, allPokemons, currentPage, paginate, prevPage
                         <li 
                         key={number} 
                         onClick={() => paginate(number)}
-                        className={'page-number'}>
+                        className={'page-number ' + (number === currentPage ? 'active' : '')}>
                             {number}
                         </li>
                     ))}

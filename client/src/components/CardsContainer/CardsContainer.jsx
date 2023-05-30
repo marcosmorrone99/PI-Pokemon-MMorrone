@@ -52,7 +52,7 @@ const CardsContainer = (props) => {
             <Paginado 
             pokemonsPerPage={pokemonsPerPage} 
             allPokemons={pokemons.length} 
-            setCurrentPage={setCurrentPage} 
+            currentPage={currentPage}
             paginate={paginate}
             prevPage={prevPage}
             nextPage={nextPage}

@@ -33,7 +33,7 @@ const handleClick = (event) => {
   }
 
   const handlerFilterCreated = (event) => {
-    setOrden(dispatch(filterCreated(event.target.value)))
+    setOrden(dispatch(filterCreated(event.target.value))) //actualizo el estado orden. Desarrollar mas adelante
  }
 
 const handleFilterTypes = (event) => {

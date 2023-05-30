@@ -9,6 +9,7 @@ const SearchBar = () => {
 const dispatch = useDispatch()
 const [name, setName] = useState('')
 
+
 const handleInputChange = (event) => {
     event.preventDefault()
     setName(event.target.value);
@@ -17,7 +18,8 @@ const handleInputChange = (event) => {
 const handleSubmit = (event) => {
     event.preventDefault()
     dispatch(getPokemonByName(name))
-}
+    }
+
 
    return (
   <div>
